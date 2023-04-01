@@ -37,7 +37,7 @@
 					<div class="card-body text-center text-success">
 						<i class="fas fa-user-md fa-3x"></i><br>
 						<p class="fs-4 text-center">
-							Doctor <br> 54
+							Teacher <br> 54
 						</p>
 					</div>
 				</div>
@@ -50,7 +50,7 @@
 					<div class="card-body text-center text-success">
 						<i class="fas fa-user-circle fa-3x"></i><br>
 						<p class="fs-4 text-center">
-							User <br> 78
+							Student <br> 78
 						</p>
 					</div>
 				</div>
@@ -61,7 +61,7 @@
 					<div class="card-body text-center text-success">
 						<i class="far fa-calendar-check fa-3x"></i><br>
 						<p class="fs-4 text-center">
-							Total Appointment <br> 8
+							Total Enrollment <br> 8
 						</p>
 					</div>
 				</div>
@@ -74,7 +74,7 @@
 					<div class="card-body text-center text-success">
 						<i class="far fa-calendar-check fa-3x"></i><br>
 						<p class="fs-4 text-center">
-							Specialist <br>5
+							Course <br>5
 						</p>
 					</div>
 				</div>
@@ -97,11 +97,11 @@
 						aria-label="Close"></button>
 				</div>
 				<div class="modal-body">
-					<form action="../addSpecialist" method="post">
+					<form action="../addCourse" method="post">
 
 						<div class="form-group">
-							<label>Enter Specialist Name</label> <input type="text"
-								name="specName" class="form-control">
+							<label>Enter Course Name</label> <input type="text"
+								name="courseName" class="form-control">
 						</div>
 						<div class="text-center mt-3">
 							<button type="submit" class="btn btn-primary">Add</button>
