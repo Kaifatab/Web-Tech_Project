@@ -35,5 +35,31 @@ public class CourseDao {
 
 		return f;
 	}
+	
+	
+	
+	public List<Course> getAllCourse() {
+		List<Course> list = new ArrayList<Course>();
+		Course s = null;
+
+		try {
+			String sql = "select * from course";
+			PreparedStatement ps = conn.prepareStatement(sql);
+
+			ResultSet rs = ps.executeQuery();
+
+			while (rs.next()) {
+				s = new Course();
+				s.setId(rs.getInt(1));
+				s.setCourseName(rs.getString(2));
+				list.add(s);
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return list;
+	}
 
 }

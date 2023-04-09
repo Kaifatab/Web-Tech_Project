@@ -14,7 +14,7 @@
 			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
 				<li class="nav-item"><a class="nav-link active" href="index.jsp">Home</a></li>
-				<li class="nav-item"><a class="nav-link active" href="doctor.jsp">Teacher</a></li>
+				<li class="nav-item"><a class="nav-link active" href="teacher.jsp">Teacher</a></li>
 				<li class="nav-item"><a class="nav-link active" href="view_doctor.jsp">View Teacher</a></li>
 				<li class="nav-item"><a class="nav-link active" href="patient.jsp">Student</a></li>
 
