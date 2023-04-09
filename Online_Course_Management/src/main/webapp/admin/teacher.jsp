@@ -27,14 +27,7 @@
 				<div class="card paint-card">
 					<div class="card-body">
 						<p class="fs-3 text-center">Add Teacher</p>
-						<c:if test="${not empty errorMsg}">
-							<p class="fs-3 text-center text-danger">${errorMsg}</p>
-							<c:remove var="errorMsg" scope="session" />
-						</c:if>
-						<c:if test="${not empty succMsg}">
-							<div class="fs-3 text-center text-success" role="alert">${succMsg}</div>
-							<c:remove var="succMsg" scope="session" />
-						</c:if>
+
 						<form action="../addTeacher" method="post">
 							<div class="mb-3">
 								<label class="form-label">Full Name</label> <input type="text"
@@ -88,6 +81,14 @@
 				<div class="card paint-card">
 					<div class="card-body">
 						<p class="fs-3 text-center">Teacher Details</p>
+						<c:if test="${not empty errorMsg}">
+							<p class="fs-3 text-center text-danger">${errorMsg}</p>
+							<c:remove var="errorMsg" scope="session" />
+						</c:if>
+						<c:if test="${not empty succMsg}">
+							<div class="fs-3 text-center text-success" role="alert">${succMsg}</div>
+							<c:remove var="succMsg" scope="session" />
+						</c:if>
 						<table class="table">
 							<thead>
 								<tr>
@@ -102,17 +103,17 @@
 								<%
 								TeacherDao dao2 = new TeacherDao(DBConnect.getConn());
 								List<Teacher> list2 = dao2.getAllTeacher();
-								for (Teacher d : list2) 
-								{%>
+								for (Teacher d : list2) {
+								%>
 								<tr>
 									<td><%=d.getFullName()%></td>
 									<td><%=d.getCourse()%></td>
 									<td><%=d.getEmail()%></td>
 									<td><%=d.getPhnNo()%></td>
-									<td>
-									<a href="#" class="btn btn-sm btn-success">Edit</a>
-									<a href="#" class="btn btn-sm btn-secondary">Delete</a>
-									</td>
+									<td><a href="edit_teacher.jsp?id=<%=d.getId()%>"
+										class="btn btn-sm btn-success">Edit</a> 
+										<a href="../deleteTeacher?id=<%=d.getId()%>"
+										class="btn btn-sm btn-secondary">Delete</a></td>
 								</tr>
 								<%
 								}
