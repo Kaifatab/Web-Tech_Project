@@ -19,7 +19,7 @@
 							class="fas fa-sign-in-alt"></i> Admin</a></li>
 
 					<li class="nav-item"><a class="nav-link active"
-						aria-current="page" href="doctor_login.jsp">Teacher</a></li>
+						aria-current="page" href="teacher_login.jsp">Teacher</a></li>
 					<li class="nav-item"><a class="nav-link active"
 						aria-current="page" href="user_appointment.jsp">Enroll</a></li>
 					<li class="nav-item"><a class="nav-link active"
