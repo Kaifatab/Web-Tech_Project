@@ -21,7 +21,7 @@
 					<li class="nav-item"><a class="nav-link active"
 						aria-current="page" href="teacher_login.jsp">Teacher</a></li>
 					<li class="nav-item"><a class="nav-link active"
-						aria-current="page" href="user_appointment.jsp">Enroll</a></li>
+						aria-current="page" href="student_enrollment.jsp">Enroll</a></li>
 					<li class="nav-item"><a class="nav-link active"
 						aria-current="page" href="user_login.jsp">Student</a></li>
 
@@ -32,7 +32,7 @@
 
 				<c:if test="${not empty userObj }">
 					<li class="nav-item"><a class="nav-link active"
-						aria-current="page" href="user_appointment.jsp">Enroll</a></li>
+						aria-current="page" href="student_enrollment.jsp">Enroll</a></li>
 
 					<li class="nav-item"><a class="nav-link active"
 						aria-current="page" href="view_appointment.jsp">View Course</a></li>
