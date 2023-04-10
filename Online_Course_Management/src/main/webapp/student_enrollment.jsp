@@ -43,7 +43,7 @@ response.setDateHeader("Expires", 0);
 	<div class="container p-3">
 		<div class="row">
 			<div class="col-md-6 p-5">
-				<img alt="" src="img/TheLittleThings-Working.png">
+				<img alt="" src="img/Humaaans - Space.png">
 			</div>
 
 			<div class="col-md-6">

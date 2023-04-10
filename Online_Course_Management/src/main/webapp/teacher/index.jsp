@@ -26,6 +26,41 @@
 	
 	<%@include file="navbar.jsp"%>
 	
-	<h1>Teacher Dashboard</h1>
+	
+	<p class="text-center fs-3">Teacher Dashboard</p>
+
+	<%
+	Teacher d = (Teacher) session.getAttribute("tchObj");
+	TeacherDao dao = new TeacherDao(DBConnect.getConn());
+	%>
+	<div class="container p-5">
+		<div class="row">
+			<div class="col-md-4 offset-md-2">
+				<div class="card paint-card">
+					<div class="card-body text-center text-success">
+						<i class="fas fa-user-md fa-3x"></i><br>
+						<p class="fs-4 text-center">
+							Teacher <br> 6
+							<%--<%=dao.countTeacher()--%>
+						</p>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="col-md-4">
+				<div class="card paint-card">
+					<div class="card-body text-center text-success">
+						<i class="far fa-calendar-check fa-3x"></i><br>
+						<p class="fs-4 text-center">
+							Total Enrollment <br> 45
+							<%-- <%=dao.countEnrollmentByTeacherId(d.getId())--%>
+						</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
 </body>
 </html>

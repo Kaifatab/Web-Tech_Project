@@ -35,7 +35,7 @@
 						aria-current="page" href="student_enrollment.jsp">Enroll</a></li>
 
 					<li class="nav-item"><a class="nav-link active"
-						aria-current="page" href="view_appointment.jsp">View Course</a></li>
+						aria-current="page" href="view_enrollment.jsp">View Enrollment</a></li>
 
 					<div class="dropdown">
 						<button class="btn btn-success dropdown-toggle" type="button"
