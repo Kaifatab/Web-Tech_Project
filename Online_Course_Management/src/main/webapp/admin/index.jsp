@@ -1,3 +1,5 @@
+<%@page import="com.db.DBConnect"%>
+<%@page import="com.dao.TeacherDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -31,13 +33,17 @@
 			<c:remove var="succMsg" scope="session" />
 		</c:if>
 		
+		<%
+		TeacherDao dao = new TeacherDao(DBConnect.getConn());
+		%>
+		
 		<div class="row">
 			<div class="col-md-4">
 				<div class="card paint-card">
 					<div class="card-body text-center text-success">
 						<i class="fas fa-user-md fa-3x"></i><br>
 						<p class="fs-4 text-center">
-							Teacher <br> 54
+							Teacher <br> <%=dao.countTeacher()%>
 						</p>
 					</div>
 				</div>
@@ -50,7 +56,7 @@
 					<div class="card-body text-center text-success">
 						<i class="fas fa-user-circle fa-3x"></i><br>
 						<p class="fs-4 text-center">
-							Student <br> 78
+							Student <br> <%=dao.countUSer()%>
 						</p>
 					</div>
 				</div>
@@ -61,7 +67,7 @@
 					<div class="card-body text-center text-success">
 						<i class="far fa-calendar-check fa-3x"></i><br>
 						<p class="fs-4 text-center">
-							Total Enrollment <br> 8
+							Total Enrollment <br> <%=dao.countEnrollment()%>
 						</p>
 					</div>
 				</div>
@@ -74,7 +80,7 @@
 					<div class="card-body text-center text-success">
 						<i class="far fa-calendar-check fa-3x"></i><br>
 						<p class="fs-4 text-center">
-							Course <br>5
+							Course <br> <%=dao.countCourse()%>
 						</p>
 					</div>
 				</div>
