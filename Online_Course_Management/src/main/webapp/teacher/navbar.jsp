@@ -25,8 +25,8 @@
 						<i class="fas fa-user-circle"></i> ${tchObj.fullName }
 					</button>
 					<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-						<li><a class="dropdown-item" href="edit_profile.jsp">Edit
-								Profile</a></li>
+						<li><a class="dropdown-item" href="edit_profile.jsp">Change Password
+								</a></li>
 						<li><a class="dropdown-item" href="../teacherLogout">Logout</a></li>
 					</ul>
 				</div>
