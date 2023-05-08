@@ -150,13 +150,12 @@ public class TeacherDao {
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
 				d = new Teacher();
-				d = new Teacher();
 				d.setId(rs.getInt(1));
 				d.setFullName(rs.getString(2));
-				d.setCourse(rs.getString(5));
-				d.setEmail(rs.getString(6));
-				d.setPhnNo(rs.getString(7));
-				d.setPassword(rs.getString(8));
+				d.setCourse(rs.getString(3));
+				d.setEmail(rs.getString(4));
+				d.setPhnNo(rs.getString(5));
+				d.setPassword(rs.getString(6));
 			}
 
 		} catch (Exception e) {

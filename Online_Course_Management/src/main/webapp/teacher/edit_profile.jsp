@@ -11,14 +11,26 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 <style type="text/css">
 .paint-card {
 	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
+.text-theme{
+	color: #14213D !important;
+}
+.text-theme2{
+	color: #0e0069 !important ;
+}
+.font{
+font-family: 'Poppins', sans-serif;
+}
 </style>
 <%@include file="../component/allcss.jsp"%>
 </head>
-<body>
+<body class="font">
 	<c:if test="${empty tchObj }">
 		<c:redirect url="../teacher_login.jsp"></c:redirect>
 	</c:if>
@@ -27,10 +39,13 @@
 	<%@include file="navbar.jsp"%>
 
 	<div class="container p-4">
-		<div class="row">
-			<div class="col-md-4 offset-md-4">
-				<div class="card paint-card">
-					<p class="text-center fs-3">Change Password</p>
+		<div class="w-75 shadow-lg d-flex mt-5 mx-auto">
+		    <div  class="w-50">
+		     <img class="w-100 p-5" src="img/forgott.png" />
+		    </div>
+			<div class="w-50 px-3 border-start m-auto ">
+				<div class="w-100">
+					<p class="text-center text-warning fw-bold fs-4"> <span class="text-theme2">Change</span> Password</p>
 					<c:if test="${not empty succMsg }">
 						<p class="text-center text-success fs-3">${succMsg}</p>
 						<c:remove var="succMsg" scope="session" />
@@ -52,7 +67,7 @@
 									name="oldPassword" class="form-control" required>
 							</div>
 							<input type="hidden" value="${tchObj.id }" name="uid">
-							<button class="btn btn-success col-md-12">Change
+							<button class="btn btn-warning w-100">Change
 								Password</button>
 						</form>
 					</div>

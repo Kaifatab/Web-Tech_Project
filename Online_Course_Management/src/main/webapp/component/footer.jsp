@@ -1,3 +1,3 @@
-<div class="container-fluid p-1 bg-secondary text-center text-white">
-	<p>@copyright CourseCORD.com, 2023</p>
+<div class="bg-dark text-center text-light p-4 m-0">
+	<p class="my-auto"> <small>@ copyright <span class="text-info">CourseCORD.com</span> || 2023</small> </p>
 </div>

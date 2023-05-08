@@ -26,6 +26,7 @@ public class UpdateTeacher extends HttpServlet {
 			String email = req.getParameter("email");
 			String phnno = req.getParameter("phnno");
 			String password = req.getParameter("password");
+			String from = req.getParameter("page");
 			
 			int id = Integer.parseInt(req.getParameter("id"));
 
@@ -33,14 +34,26 @@ public class UpdateTeacher extends HttpServlet {
 
 			TeacherDao dao = new TeacherDao(DBConnect.getConn());
 			HttpSession session = req.getSession();
-
-			if (dao.updateTeacher(d)) {
-				session.setAttribute("succMsg", "Teacher Updated Sucessfully..");
-				resp.sendRedirect("admin/teacher.jsp");
-			} else {
-				session.setAttribute("errorMsg", "something wrong on server");
-				resp.sendRedirect("admin/teacher.jsp");
+			if(from.equals("fromAdmin")) {
+				if (dao.updateTeacher(d)) {
+					session.setAttribute("succMsg", "Teacher Updated Sucessfully..");
+					resp.sendRedirect("admin/teacher.jsp");
+				} else {
+					session.setAttribute("errorMsg", "something wrong on server");
+					resp.sendRedirect("admin/teacher.jsp");
+				}
 			}
+			else {
+				if (dao.updateTeacher(d)) {
+					//session.setAttribute("succMsg", "Teacher Updated Sucessfully..");
+					session.setAttribute("tchObj", d);
+					resp.sendRedirect("teacher/index.jsp");
+				} else {
+					//session.setAttribute("errorMsg", "something wrong on server");
+					resp.sendRedirect("teacher/edit_teacher_profile.jsp");
+				}
+			}
+			
 
 		} catch (Exception e) {
 			e.printStackTrace();

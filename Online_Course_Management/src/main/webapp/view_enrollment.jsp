@@ -14,6 +14,9 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>View Enrollment</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 <%@include file="component/allcss.jsp"%>
 <style type="text/css">
 .paint-card {
@@ -28,11 +31,24 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 }
+.text-theme{
+	color: #14213D !important;
+}
+.text-theme2{
+	color: #0e0069 !important ;
+}
+.font{
+font-family: 'Poppins', sans-serif;
+}
+.mt100{
+margin-top:150px
+}
+
 </style>
 </head>
 
 
-<body>
+<body class="font">
 
 	<c:if test="${empty userObj }">
 		<c:redirect url="user_login.jsp"></c:redirect>
@@ -46,15 +62,15 @@
 	<div class="container p-3">
 		<div class="row">
 			<div class="col-md-8">
-				<div class="card paint-card">
-					<div class="card-body">
-						<p class="fs-4 fw-bold text-center text-primary">Enrollment
+				<div class="">
+					<div class="mt100 shadow-lg py-4">
+						<p class="fs-5 fw-bold text-center text-theme2">Enrollment
 							List</p>
 						<table class="table">
-							<thead>
-								<tr>
-									<th scope="col">Full Name</th>
-									<th scope="col">Registration No.</th>
+							<thead class="table-primary">
+								<tr class="mx-3">
+									<th class="text-center" scope="col">Full Name</th>
+									<th scope="col">Reg. No</th>
 									<th scope="col">Start Date</th>
 									<th scope="col">Teacher</th>
 									<th scope="col">Status</th>
@@ -72,18 +88,18 @@
 									Teacher d = dao2.getTeacherById(ap.getTeacherId());
 								%>
 								<tr>
-									<th><%=ap.getFullName()%></th>
-									<td><%=ap.getReg()%></td>
+									<td class="text-center"><%=ap.getFullName()%></th>
+									<td ><%=ap.getReg()%></td>
 									<td><%=ap.getStartDate()%></td>
 									<td><%=d.getFullName()%></td>
 									<td>
 										<%
 										if ("Pending".equals(ap.getStatus())) {
 										%> <a href="#" class="btn btn-sm btn-warning">Pending</a> <%
- } else {
- %> <%=ap.getStatus()%> <%
- }
- %>
+                                        } else {
+                                        %> <%=ap.getStatus()%> <%
+                                        }
+                                        %>
 									</td>
 								</tr>
 								<%
@@ -97,8 +113,8 @@
 				</div>
 			</div>
 
-			<div class="col-md-4 p-3">
-				<img alt="" src="img/Allura - Giant Phone.png">
+			<div class="col-md-4 p-4">
+				<img class="w-100" alt="" src="img/Allura - Giant Phone.png">
 			</div>
 		</div>
 	</div>

@@ -11,23 +11,37 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Student Details</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
 <%@include file="../component/allcss.jsp"%>
 <style type="text/css">
 .paint-card {
 	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
+.text-theme{
+	color: #14213D !important;
+}
+.text-theme2{
+	color: #0e0069 !important ;
+}
+.font{
+font-family: 'Poppins', sans-serif;
+}
+
 </style>
 </head>
 
 
-<body>
+<body class="font">
 	<%@include file="navbar.jsp"%>
-	<div class="col-md-12">
-		<div class="card paint-card">
-			<div class="card-body">
-				<p class="fs-3 text-center">Student Details</p>
+	<div class="w-100 container mt-5">
+		<div class="w-100 shadow-lg">
+			<div class="p-3">
+				<p class="text-center text-warning fw-bold fs-3 py-3"> <span class="text-theme2">Student</span> Details</p>
 				<table class="table">
-					<thead>
+					<thead class="table-primary">
 						<tr>
 							<th scope="col">Full Name</th>
 							<th scope="col">Registration No</th>
@@ -53,7 +67,7 @@
 							<td><%=ap.getEmail()%></td>
 							<td><%=ap.getPhnNo()%></td>
 							<td><%=d.getFullName()%></td>
-							<td><%=ap.getStatus()%></td>
+							<td> <p  class="btn btn-info m-0 text-light"> <%=ap.getStatus()%> </p></td>
 						</tr>
 						<%
 						}

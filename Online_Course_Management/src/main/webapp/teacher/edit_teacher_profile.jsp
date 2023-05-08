@@ -10,12 +10,10 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Edit Teacher Profile</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-
-<%@include file="../component/allcss.jsp"%>
 <style type="text/css">
 .paint-card {
 	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
@@ -29,8 +27,8 @@
 .font{
 font-family: 'Poppins', sans-serif;
 }
-
 </style>
+<%@include file="../component/allcss.jsp"%>
 </head>
 <body class="font">
 	<%@include file="navbar.jsp"%>
@@ -52,9 +50,9 @@ font-family: 'Poppins', sans-serif;
 						
 						
 						<%
-						int id = Integer.parseInt(request.getParameter("id"));
-						TeacherDao dao2 = new TeacherDao(DBConnect.getConn());
-						Teacher d = dao2.getTeacherById(id);
+					
+						Teacher d = (Teacher)session.getAttribute("tchObj");
+						System.out.println(d.getCourse());
 						%>
 						
 						
@@ -99,8 +97,10 @@ font-family: 'Poppins', sans-serif;
 								<label class="form-label">Password</label> <input required
 									name="password" type="password" class="form-control" value="<%=d.getPassword()%>">
 							</div>
-								<input type="hidden" name="page" value="fromAdmin">
+							
 							<input type="hidden" name="id" value="<%=d.getId()%>">
+							<input type="hidden" name="page" value="fromTeacher">
+							
 
 							<button type="submit" class="btn btn-warning col-md-12">Update</button>
 						</form>

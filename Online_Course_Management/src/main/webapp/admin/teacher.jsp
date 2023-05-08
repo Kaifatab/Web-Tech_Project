@@ -11,27 +11,41 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
 <%@include file="../component/allcss.jsp"%>
 <style type="text/css">
 .paint-card {
 	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
+.text-theme{
+	color: #14213D !important;
+}
+.text-theme2{
+	color: #0e0069 !important ;
+}
+.font{
+font-family: 'Poppins', sans-serif;
+}
+
 </style>
 </head>
-<body>
+<body class="font">
 	<%@include file="navbar.jsp"%>
 	<div class="container-fluid p-3">
-		<div class="row">
+		<div class="row mx-3 mt-4">
 
 			<div class="col-md-4 ">
-				<div class="card paint-card">
-					<div class="card-body">
-						<p class="fs-3 text-center">Add Teacher</p>
+				<div class="w-100 shadow-lg">
+					<div class="p-3">
+						<p class="text-center text-warning fw-bold fs-4 py-3"> <span class="text-theme2">Add</span> Teacher	</p>
 
 						<form action="../addTeacher" method="post">
 							<div class="mb-3">
-								<label class="form-label">Full Name</label> <input type="text"
-									required name="fullname" class="form-control">
+								<label class="form-label">Full Name</label> 
+								<input placeholder="Enter full name" type="text" required name="fullname" class="form-control">
 							</div>
 
 
@@ -56,21 +70,20 @@
 							</div>
 
 							<div class="mb-3">
-								<label class="form-label">Email</label> <input type="text"
-									required name="email" class="form-control">
+								<label class="form-label">Email</label> 
+								<input placeholder="Enter your email" type="text" required name="email" class="form-control">
 							</div>
 
 							<div class="mb-3">
 								<label class="form-label">Phone No</label> <input type="text"
-									required name="phnno" class="form-control">
+							placeholder="Enter phone number" required name="phnno" class="form-control">
 							</div>
 
 							<div class="mb-3">
 								<label class="form-label">Password</label> <input required
-									name="password" type="password" class="form-control">
+								placeholder="Enter your pass"	name="password" type="password" class="form-control">
 							</div>
-
-							<button type="submit" class="btn btn-primary">Submit</button>
+							<button type="submit" class="btn btn-warning mx-auto w-100">Submit</button>
 						</form>
 					</div>
 				</div>
@@ -78,9 +91,9 @@
 
 
 			<div class="col-md-8">
-				<div class="card paint-card">
-					<div class="card-body">
-						<p class="fs-3 text-center">Teacher Details</p>
+				<div class="w-100 shadow-lg">
+					<div class="p-3">
+						<p class="text-center text-warning fw-bold fs-4 py-3"> <span class="text-theme2">Teacher</span> Details	</p>
 						<c:if test="${not empty errorMsg}">
 							<p class="fs-3 text-center text-danger">${errorMsg}</p>
 							<c:remove var="errorMsg" scope="session" />
@@ -90,7 +103,7 @@
 							<c:remove var="succMsg" scope="session" />
 						</c:if>
 						<table class="table">
-							<thead>
+							<thead class="table-primary">
 								<tr>
 									<th scope="col">Full Name</th>
 									<th scope="col">Course</th>
@@ -111,9 +124,9 @@
 									<td><%=d.getEmail()%></td>
 									<td><%=d.getPhnNo()%></td>
 									<td><a href="edit_teacher.jsp?id=<%=d.getId()%>"
-										class="btn btn-sm btn-success">Edit</a> 
+										class="btn btn-sm btn-info text-light px-3  me-1">Edit</a> 
 										<a href="../deleteTeacher?id=<%=d.getId()%>"
-										class="btn btn-sm btn-secondary">Delete</a></td>
+										class="btn btn-sm btn-danger">Delete</a></td>
 								</tr>
 								<%
 								}

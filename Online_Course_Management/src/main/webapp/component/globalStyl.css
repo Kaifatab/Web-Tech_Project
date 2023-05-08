@@ -1,0 +1,14 @@
+.theme-color-bg{
+ background-color: #14213D !important;
+
+}
+.text-theme{
+	color: #14213D !important;
+}
+.text-theme2{
+	color: #0e0069 !important ;
+}
+
+.paint-card {
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}

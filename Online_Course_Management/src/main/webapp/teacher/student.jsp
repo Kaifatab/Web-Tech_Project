@@ -12,14 +12,27 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Student List</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 <%@include file="../component/allcss.jsp"%>
 <style type="text/css">
 .paint-card {
 	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
+.text-theme{
+	color: #14213D !important;
+}
+.text-theme2{
+	color: #0e0069 !important ;
+}
+.font{
+font-family: 'Poppins', sans-serif;
+}
+
 </style>
 </head>
-<body>
+<body class="font">
 	<c:if test="${empty tchObj }">
 		<c:redirect url="../teacher_login.jsp"></c:redirect>
 	</c:if>
@@ -30,9 +43,9 @@
 		<div class="row">
 
 			<div class="col-md-12">
-				<div class="card paint-card">
-					<div class="card-body">
-						<p class="fs-3 text-center">Student Details</p>
+				<div class="w-100 py-4 mt-5 shadow-lg">
+					<div class="p-3">
+						<p class="text-center text-warning fw-bold fs-4"> <span class="text-theme2">Student</span> Details</p>
 						<c:if test="${not empty errorMsg}">
 							<p class="fs-4 text-center text-danger">${errorMsg}</p>
 							<c:remove var="errorMsg" scope="session" />
@@ -43,7 +56,7 @@
 						</c:if>
 
 						<table class="table">
-							<thead>
+							<thead class="table-primary">
 								<tr>
 									<th scope="col">Full Name</th>
 									<th scope="col">Reg No</th>

@@ -18,6 +18,9 @@ response.setDateHeader("Expires", 0);
 <head>
 <meta charset="ISO-8859-1">
 <title>Student Enrollment</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 <%@include file="component/allcss.jsp"%>
 <style type="text/css">
 .paint-card {
@@ -32,9 +35,18 @@ response.setDateHeader("Expires", 0);
 	background-size: cover;
 	background-repeat: no-repeat;
 }
+.font{
+font-family: 'Poppins', sans-serif;
+}
+.text-theme{
+	color: #14213D !important;
+}
+.text-theme2{
+	color: #0e0069 !important ;
+}
 </style>
 </head>
-<body>
+<body class="font">
 	<%@include file="component/navbar.jsp"%>
 
 	<div class="container-fulid backImg p-5">
@@ -46,10 +58,10 @@ response.setDateHeader("Expires", 0);
 				<img alt="" src="img/Humaaans - Space.png">
 			</div>
 
-			<div class="col-md-6">
-				<div class="card paint-card">
-					<div class="card-body">
-						<p class="text-center fs-3">Enroll for a Course</p>
+			<div class="col-md-6 my-5">
+				<div class="w-100 shadow-lg">
+					<div class="p-3">
+						<p class="text-center text-warning fs-4 py-4 fw-bold"><span class="text-theme2">Enroll for a</span>  Course</p>
 
 						
 						<c:if test="${not empty errorMsg}">
@@ -67,13 +79,13 @@ response.setDateHeader("Expires", 0);
 							<input type="hidden" name="userid" value="${userObj.id }">
 
 							<div class="col-md-6">
-								<label for="inputEmail4" class="form-label">Full Name</label> <input
-									required type="text" class="form-control" name="fullname">
+								<label for="inputEmail4" class="form-label">Full Name</label> 
+								<input placeholder="Enter full name" required type="text" class="form-control" name="fullname">
 							</div>
 
 							<div class="col-md-6">
 								<label for="inputEmail4" class="form-label">Registration
-									no.</label> <input required type="number" class="form-control"
+									no.</label> <input placeholder="Enter reg. no" required type="number" class="form-control"
 									name="reg">
 							</div>
 
@@ -85,20 +97,20 @@ response.setDateHeader("Expires", 0);
 
 							<div class="col-md-6">
 								<label for="inputEmail4" class="form-label">Email</label> <input
-									required type="email" class="form-control" name="email">
+									required type="email" class="form-control" name="email" placeholder="Enter email">
 							</div>
 
 							<div class="col-md-6">
 								<label for="inputEmail4" class="form-label">Phone No</label> <input
 									maxlength="10" required type="number" class="form-control"
-									name="phno">
+									name="phno" placeholder="Enter phone number">
 							</div>
 
 
 							<div class="col-md-6">
 								<label for="inputPassword4" class="form-label">Teacher</label> <select
 									required class="form-control" name="teacher">
-									<option value="">--select--</option>
+									<option value="">-select-</option>
 
 									<%
 									TeacherDao dao = new TeacherDao(DBConnect.getConn());
@@ -120,11 +132,11 @@ response.setDateHeader("Expires", 0);
 
 							<c:if test="${empty userObj }">
 								<a href="user_login.jsp"
-									class="col-md-6 offset-md-3 btn btn-success">Submit</a>
+									class="col-md-6 offset-md-3 btn btn-warning">Submit</a>
 							</c:if>
 
 							<c:if test="${not empty userObj }">
-								<button class="col-md-6 offset-md-3 btn btn-success">Submit</button>
+								<button class="col-md-6 offset-md-3 btn btn-warning mt-3 text-light">Submit</button>
 							</c:if>
 						</form>
 					</div>
