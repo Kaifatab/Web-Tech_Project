@@ -10,9 +10,13 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Teacher Dashboard</title>
+
+<!-- import font from google font -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+<!-- css for this file  -->
 <style type="text/css">
 .paint-card {
 	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
@@ -32,19 +36,24 @@
 .font{
 font-family: 'Poppins', sans-serif;
 }
-
 </style>
+
+<!-- import gobal css file -->
 <%@include file="../component/allcss.jsp"%>
 </head>
 
 
 <body class="font">
+
+	<!-- redirecting teacher login component -->
 	<c:if test="${empty tchObj }">
 		<c:redirect url="../teacher_login.jsp"></c:redirect>
 	</c:if>
 	
+	<!-- navbar component -->
 	<%@include file="navbar.jsp"%>
 	
+	<!-- Teacher Dashboard component start-->
 	<p class="text-center text-warning fw-bold fs-4 pt-5"> <span class="text-theme2">Teacher</span> Dashboard</p>
 
 	<%
@@ -80,6 +89,8 @@ font-family: 'Poppins', sans-serif;
 
 		</div>
 	</div>
+
+	<!-- Teacher Dashboard component end-->
 
 </body>
 </html>

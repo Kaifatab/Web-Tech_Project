@@ -1,6 +1,10 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@page isELIgnored="false"%>
+
+ <!-- global css link  -->
 <link href="./globalStyl.css" rel="stylesheet" type="text/css">
+
+<!-- navbar component start -->
 <nav style="background-color: #14213D !important;" class="navbar navbar-expand-lg theme-color-bg fixed">
 	<div class="container">
 		<a class="navbar-brand text-warning" href="./index.jsp"><i class="fa-solid fa-book"></i>
@@ -65,3 +69,4 @@
 		</div>
 	</div>
 </nav>
+<!-- navbar component end -->

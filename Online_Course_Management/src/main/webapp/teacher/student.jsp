@@ -12,10 +12,17 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Student List</title>
+
+<!-- import font from google font -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+<!-- import gobal css file -->
 <%@include file="../component/allcss.jsp"%>
+
+
+<!-- css for this file  -->
 <style type="text/css">
 .paint-card {
 	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
@@ -37,8 +44,10 @@ font-family: 'Poppins', sans-serif;
 		<c:redirect url="../teacher_login.jsp"></c:redirect>
 	</c:if>
 
-
+	<!-- navbar component -->
 	<%@include file="navbar.jsp"%>
+
+	<!-- student details component start  -->
 	<div class="container p-3">
 		<div class="row">
 
@@ -111,8 +120,7 @@ font-family: 'Poppins', sans-serif;
 
 		</div>
 	</div>
-
-
+	<!-- student details component end  -->
 
 </body>
 </html>

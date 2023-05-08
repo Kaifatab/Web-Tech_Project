@@ -7,11 +7,16 @@
 <head>
 <meta charset="UTF-8">
 <title>Admin Dashboard</title>
+
+<!-- import font from google font -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
+<!-- import gobal css file -->
 <%@include file="../component/allcss.jsp"%>
+
+<!-- css for this file  -->
 <style type="text/css">
 .paint-card {
 	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
@@ -31,17 +36,21 @@
 .font{
 font-family: 'Poppins', sans-serif;
 }
-
 </style>
 </head>
 
 
 <body class="font">
+
+	<!-- navbar component -->
 	<%@include file="navbar.jsp"%>
+
+	<!-- redirecting admin login  -->
 	<c:if test="${ empty adminObj }">
 		<c:redirect url="../admin_login.jsp"></c:redirect>
 	</c:if>
 
+	<!-- Admin Dashboard component start -->
 	<div class="container p-5">
 		<p class="text-center text-warning fw-bold fs-3 pb-5"> <span class="text-theme2">Admin</span> Dashboard</p>
 		<c:if test="${not empty errorMsg}">
@@ -113,6 +122,7 @@ font-family: 'Poppins', sans-serif;
 
 		</div>
 	</div>
+	<!-- Admin Dashboard component end -->
 
 
 
