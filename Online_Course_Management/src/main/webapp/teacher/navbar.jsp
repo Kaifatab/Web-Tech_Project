@@ -1,6 +1,8 @@
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@page isELIgnored="false"%>
+
+<!-- navbar component start -->
 <nav style="background-color: #14213D !important;" class="navbar navbar-expand-lg navbar-dark bg-dark">
 	<div class="container-fluid mx-5">
 		<a class="navbar-brand text-warning" href="index.jsp"><i
@@ -35,3 +37,4 @@
 		</div>
 	</div>
 </nav>
+<!-- navbar component end -->

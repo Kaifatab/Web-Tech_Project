@@ -8,14 +8,21 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Index Page</title>
+
+<title>Home</title>
+
+<!-- import font from google font -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link
 	href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
 	rel="stylesheet">
+
+
+<!-- import gobal css file -->
 <%@include file="component/allcss.jsp"%>
 
+<!-- css for this file  -->
 <style type="text/css">
 .theme-color-bg {
 	background-color: 14213D;
@@ -46,8 +53,10 @@
 <body class="font">
 
 
+	<!-- navbar component -->
 	<%@include file="component/navbar.jsp"%>
 
+	<!-- home page slider component start -->
 	<div id="carouselExampleIndicators" class="carousel slide"
 		data-bs-ride="carousel">
 		<div class="carousel-indicators">
@@ -85,9 +94,10 @@
 				class="visually-hidden">Next</span>
 		</button>
 	</div>
+	<!-- home page slider component end -->
 
 
-
+     <!-- home page intro section start -->
 	<div class="container d-flex mt-3 my-5 py-5">
 		<div class="m-auto">
 			<h2 class="text-theme2 fw-bold">CourseCord</h2>
@@ -98,7 +108,9 @@
 			<img class="w-100" alt="this is a picture" src="img/home3.jpg">
 		</div>
 	</div>
+	<!-- home page intro section end -->
 
+	<!-- features component start -->
 	<div class="container p-3">
 		<p class="text-center fs-2 text-theme2 border-bottom pb-4 fw-bold">Key
 			Features of our Website</p>
@@ -154,9 +166,11 @@
 
 		</div>
 	</div>
+	<!-- features component start -->
 
 	<hr>
 
+	<!-- footer component  -->
 	<%@include file="component/footer.jsp"%>
 
 </body>

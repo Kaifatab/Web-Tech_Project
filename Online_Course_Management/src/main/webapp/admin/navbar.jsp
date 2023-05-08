@@ -1,5 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@page isELIgnored="false"%>
+
+<!-- navbar component for teacher navigation start -->
 <nav style="background-color: #14213D !important;" class="navbar navbar-expand-lg navbar-dark bg-dark">
 	<div class="container-fluid">
 		<a class="navbar-brand text-warning ms-5" href="#"><i class="fa-solid fa-book text-warning"></i>
@@ -33,3 +35,4 @@
 		</div>
 	</div>
 </nav>
+<!-- navbar component for teacher navigation end -->

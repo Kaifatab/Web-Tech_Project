@@ -10,6 +10,16 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Comment</title>
+
+<!-- import font from google font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+	href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+	rel="stylesheet">
+
+
+<!-- css for this file  -->
 <style type="text/css">
 .paint-card {
 	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
@@ -24,15 +34,21 @@
 	background-repeat: no-repeat;
 }
 </style>
+
+<!-- import gobal css file -->
 <%@include file="../component/allcss.jsp"%>
 </head>
 <body>
+
+	<!-- redirecting teacher login page  -->
 	<c:if test="${empty tchObj }">
 		<c:redirect url="../teacher_login.jsp"></c:redirect>
 	</c:if>
 
-
+    <!-- navbar component -->
 	<%@include file="navbar.jsp"%>
+
+	<!-- enroll student component start -->
 	<div class="container-fulid backImg p-5">
 		<p class="text-center fs-2 text-white"></p>
 	</div>
@@ -90,5 +106,6 @@
 			</div>
 		</div>
 	</div>
+	<!-- enroll student component end -->
 </body>
 </html>

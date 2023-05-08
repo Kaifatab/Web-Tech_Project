@@ -14,10 +14,16 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>View Enrollment</title>
+
+<!-- import font from google font -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+<!-- import gobal css file -->
 <%@include file="component/allcss.jsp"%>
+
+<!-- css for this file  -->
 <style type="text/css">
 .paint-card {
 	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
@@ -50,12 +56,15 @@ margin-top:150px
 
 <body class="font">
 
+	<!-- redirecting user login page  -->
 	<c:if test="${empty userObj }">
 		<c:redirect url="user_login.jsp"></c:redirect>
 	</c:if>
 
+	<!-- navbar component -->
 	<%@include file="component/navbar.jsp"%>
 
+	<!-- Enrollment list component start -->
 	<div class="container-fulid backImg p-5">
 		<p class="text-center fs-2 text-white"></p>
 	</div>
@@ -118,6 +127,7 @@ margin-top:150px
 			</div>
 		</div>
 	</div>
+	<!-- Enrollment list component end -->
 
 </body>
 </html>

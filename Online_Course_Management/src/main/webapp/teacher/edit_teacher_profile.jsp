@@ -11,9 +11,13 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Edit Teacher Profile</title>
+
+<!-- import font from google font -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+<!-- css for this file  -->
 <style type="text/css">
 .paint-card {
 	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
@@ -28,10 +32,18 @@
 font-family: 'Poppins', sans-serif;
 }
 </style>
+
+<!-- import gobal css file -->
 <%@include file="../component/allcss.jsp"%>
+
+
 </head>
 <body class="font">
+
+	<!-- navbar component -->
 	<%@include file="navbar.jsp"%>
+
+	<!-- edit teacher component start -->
 	<div class="container-fluid p-3">
 		<div class="row">
 
@@ -109,5 +121,7 @@ font-family: 'Poppins', sans-serif;
 			</div>
 		</div>
 	</div>
+	<!-- edit teacher component end -->
+
 </body>
 </html>
