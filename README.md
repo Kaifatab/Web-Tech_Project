@@ -1,5 +1,5 @@
 # CourseCORD
-### The website simulates the functionalities of an online course management system. 
+The website simulates the functionalities of an online course management system. 
 
 ## Teachnologies
 ![Java](https://img.shields.io/badge/-Java%20-brightgreen)
